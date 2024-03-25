@@ -12,7 +12,7 @@
 
 ## Usage
 
-### to_md_table.py
+### [to_md_table.py](change_passwords.sh)
 
 ```bash
 python to_md_table.py <input_file_name_ext> <output_file_name>
@@ -24,7 +24,7 @@ python to_md_table.py test.csv test
 # test.md
 ```
 
-### rename_date.py
+### [rename_date.py](change_passwords.sh)
 
 ```bash
 python rename_date.py <input_file_name_ext>
@@ -36,7 +36,7 @@ python rename_date.py test.pdf
 # 2024_03_25_test.pdf
 ```
 
-### rename_underline.py
+### [rename_underline.py](change_passwords.sh)
 
 ```bash
 python rename_underline.py [directory_path]
@@ -51,21 +51,21 @@ python rename_underline.py /Documents
 # All the files in the directory will be renamed with replacing spaces with underscores.
 ```
 
-### change_passwords.sh
+### [change_passwords.sh](change_passwords.sh)
 
 1. Make the script executable with the command `chmod +x change_passwords.sh`.
 2. Ensure there is a file named `passwords.txt` in the same directory as the script.
 3. Run the script as root with the command `sudo ./change_passwords.sh`.
 
 
-### generate_user_accounts.sh
+### [generate_user_accounts.sh](change_passwords.sh)
 
 1. Make the script executable with the command `chmod +x generate_user_accounts.sh`.
 2. Run the script as root with the command `sudo ./generate_user_accounts.sh <number_of_accounts> <username_prefix>`.
 3. The created user accounts will be saved in 'user_accounts.csv` as well as their passwords.
 
 
-### single_user_config.sh
+### [single_user_config.sh](change_passwords.sh)
 
 1. Make the script executable with the command `chmod +x single_user_config.sh`.
 2. Run the script as root with the command `sudo ./single_user_config.sh <username> <path_to_ssh_key> [sudo]`.
