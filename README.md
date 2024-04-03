@@ -62,7 +62,7 @@ python rename_underline.py /Documents
 
 1. Make the script executable with the command `chmod +x generate_user_accounts.sh`.
 2. Run the script as root with the command `sudo ./generate_user_accounts.sh <number_of_accounts> <username_prefix>`.
-3. The created user accounts will be saved in 'user_accounts.csv` as well as their passwords.
+3. The created user accounts will be saved in `user_accounts.csv` as well as their passwords.
 
 
 ### [single_user_config.sh](single_user_config.sh)
