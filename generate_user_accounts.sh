@@ -6,10 +6,10 @@
 # @author      Shima Bani
 # @date        January 10, 2024
 # @email       baniadam.shima@gmail.com
-# @platform    Tested on [List of Linux distributions tested]
+# @platform    Tested on Ubuntu
 #
 # @details     This script generates a specified number of user accounts with
-#              securely hashed passwords, adds them to the Linux system, and
+#              securely hashed passwords, add them to the Linux system, and
 #              saves the usernames and passwords to a CSV file.
 #
 #              IMPORTANT: Ensure that you run this script with root privileges.
