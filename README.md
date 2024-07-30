@@ -8,6 +8,7 @@
 - `change_passwords.sh`: Script to change users' password based on a file with the format username:password.
 - `generate_user_accounts.sh`: Script to generate and add a user with a securely hashed password to a Linux system.
 - `single_user_config.sh`: Script to create a user account, set up SSH access, and option of granting sudo privileges based on the Linux distribution.
+- `feed_catcher.py`: Script that fetches posts from your desired RSS feeds in the last 24 hours and saves the posts' title to a README.md file.
 
 
 ## Usage
@@ -69,3 +70,9 @@ python rename_underline.py /Documents
 
 1. Make the script executable with the command `chmod +x single_user_config.sh`.
 2. Run the script as root with the command `sudo ./single_user_config.sh <username> <path_to_ssh_key> [sudo]`.
+
+### [feed_catcher.py](feed_catcher.py)
+
+1. Open a terminal and navigate to the directory where feed_catcher.py is saved.
+2. Execute the script by running the following command in the terminal: `python ./feed_catcher.py`
+
