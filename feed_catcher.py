@@ -8,7 +8,7 @@ feeds = [
    'https://medium.com/feed/@shb8086'  
 ]
 
-yesterday = datetime.now(timezone.utc) - timedelta(days=365)
+desired_start_date = datetime.now(timezone.utc) - timedelta(days=365)
 
 # Mapping of timezone abbreviations to their corresponding UTC offsets
 tzinfos = {
@@ -37,7 +37,7 @@ def fetch_latest_posts(feed_url):
                     post_date = post_date.replace(tzinfo=timezone.utc)
                 else:
                     post_date = post_date.astimezone(timezone.utc)
-                if post_date >= yesterday:
+                if post_date >= desired_start_date:
                     latest_posts.append({
                         'title': entry.title,
                         'link': entry.link,
@@ -55,13 +55,13 @@ def display_latest_posts():
     all_latest_posts.sort(key=lambda x: x['date'], reverse=True)
     
     today_str = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    yesterday_str = yesterday.strftime('%Y-%m-%d')
+    desired_start_date_str = desired_start_date.strftime('%Y-%m-%d')
     
     with open("README.md", "w") as file:
         if not all_latest_posts:
-            file.write(f"No new posts from ({yesterday_str}) until now ({today_str}).\n")
+            file.write(f"No new posts from ({desired_start_date_str}) until now ({today_str}).\n")
         else:
-            file.write(f"## Latest Posts from ({yesterday_str}) until now ({today_str}):\n\n")
+            file.write(f"## Latest Posts from ({desired_start_date_str}) until now ({today_str}):\n\n")
             for post in all_latest_posts:
                 file.write(f"{post['date'].strftime('%Y-%m-%d %H:%M:%S')}\n{post['title']}\nLink: {post['link']}\n\n")
 
