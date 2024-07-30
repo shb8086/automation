@@ -25,7 +25,7 @@ tzinfos = {
 def fetch_latest_posts(feed_url):
     feed = feedparser.parse(feed_url)
     latest_posts = []
-    yesterday = datetime.now(timezone.utc) - timedelta(days=1)
+    yesterday = datetime.now(timezone.utc) - timedelta(days=365)
     for entry in feed.entries:
         published_date = entry.get('published') or entry.get('updated')
         if published_date:
