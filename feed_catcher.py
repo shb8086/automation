@@ -57,9 +57,9 @@ def display_latest_posts():
     
     with open("README.md", "w") as file:
         if not all_latest_posts:
-            file.write(f"No new posts from yesterday until now ({today_str}).\n")
+            file.write(f"No new posts from ({yesterday}) until now ({today_str}).\n")
         else:
-            file.write(f"## Latest Posts from yesterday until now ({today_str}):\n\n")
+            file.write(f"## Latest Posts from ({yesterday}) until now ({today_str}):\n\n")
             for post in all_latest_posts:
                 file.write(f"{post['date'].strftime('%Y-%m-%d %H:%M:%S')}\n{post['title']}\nLink: {post['link']}\n\n")
 
